@@ -5,7 +5,7 @@ import time
 
 URL = 'https://www.amazon.ca/Coup-Card-Game-Resistance-Universe/dp/B00GDI4HX4/ref=sr_1_3?dchild=1&keywords=coup&qid=1596555211&sr=8-3'
 
-headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'}
+headers = {"User-Agent": ''}
 
 def check_price():
     page = requests.get(URL, headers=headers)
@@ -33,7 +33,7 @@ def send_mail(name, link): # using smtplib to send mail
     server.starttls()
     server.ehlo()
 
-    server.login('rishivaya2@gmail.com', 'zmgsqpvamfighpxa') # app password from google app passwords
+    server.login('rishivaya2@gmail.com', 'password') # app password from google app passwords
 
     subject = 'Price fell down for', name
     body = "check amazon link", link
